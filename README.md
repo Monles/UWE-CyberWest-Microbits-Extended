@@ -30,3 +30,5 @@ Think about what you can do to find the real message...
 ### Have fun with Morse code
 I prepare a sample for you to have a look at how Morse code wroks.
 [Replit - Morse Code Converter](https://replit.com/@iceueb/morse-code?v=1)
+
+![Morse Code Converter](./images/02-Morse-Code-Converter.png)
