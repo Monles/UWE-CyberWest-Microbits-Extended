@@ -1,7 +1,7 @@
 # Aim
 This repository is the extended version of [UWE - CyberWest Teacher Workshops](https://github.com/uwe-cyber/teachersworkshop2024).
 
-# Where to start?
+### Where to start?
 Please follow the instruction in the section "Start the Game! 🤖" below.
 
 ###  Prerequisite
@@ -12,7 +12,7 @@ Please follow the instruction in the section "Start the Game! 🤖" below.
 - For Micro-bit and python usage for it, go to [https://microbit.org/code/](https://microbit.org/code/)
 - More Python? [W3School](https://www.w3schools.com/python/default.asp) is your good friend.
 
-
+---
 
 # ❔How to start?
 
@@ -32,10 +32,10 @@ Please follow the instruction in the section "Start the Game! 🤖" below.
 
 ![Save file](./images/03-save-file.png)
 
-
+---
 # Start the Game! 🤖
-## Task 1
-### Morse code in plaintext broadcast
+## Task 1 - Morse code in plaintext broadcast
+
 Think about what you can do to find the real message...
 - What does each character represent in morse code? (Hint: They are all upper-case!)
 - Space between each morse code means... ?
