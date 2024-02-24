@@ -24,6 +24,8 @@
 
 ![python editor](./images/01-python-editor.png)
 
+![Save file](./images/03-save-file.png)
+
 ---
 
 ## Task 1
