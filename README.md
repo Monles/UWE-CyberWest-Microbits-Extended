@@ -26,7 +26,7 @@ Please follow the instruction in the section "Start the Game! 🤖" below.
 3. Copy and paste the code to the python editor
 4. Press "Save" button on the right-bottom side (.hex), you can choose to download python file or hex file(this one is set by default)
 5. Drag the hex file to the folder of microbit
-6. Run and have fun 🤞
+6. Run it and have fun 🤞
 
 ![python editor](./images/01-python-editor.png)
 
