@@ -9,8 +9,8 @@
 
 ---
 
-### ❇️ Where to start?
-Please follow the instruction in the section "Start the Game! 🤖" below.
+### ❇️ Already experienced with micro:bits?
+Please go to the section "Start the Game! 🤖" below. It's time for fun!
 
 ###  ✳️ Prerequisite
 - 2 x BBC micro:bits(v2)
