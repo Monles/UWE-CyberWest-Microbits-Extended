@@ -18,7 +18,7 @@ Please follow the instruction in the section "Start the Game! 🤖" below.
 
 ### 🛹 Method 1
 1. Download the hex file in this repository
-2. Drage the hex file to the folder micro-bits
+2. Drage the hex file to the folder of micro-bits
 
 ### 🛴Method 2
 1. Go to [https://microbit.org/code/](https://microbit.org/code/)
