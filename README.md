@@ -16,6 +16,8 @@
 5. Drag the hex file to the folder of microbit
 6. Run and have fun 🤞
 
+![python editor](./images/01-python-editor.png)
+
 ---
 
 ## Task 1
