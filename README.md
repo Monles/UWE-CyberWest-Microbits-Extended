@@ -1,20 +1,20 @@
 # Aim 🏍️
 This repository is the extended version of [UWE - CyberWest Teacher Workshops](https://github.com/uwe-cyber/teachersworkshop2024).
 
-### ❇️Where to start?
+### ❇️ Where to start?
 Please follow the instruction in the section "Start the Game! 🤖" below.
 
-###  ✳️Prerequisite
+###  ✳️ Prerequisite
 - 2 x micro-bits
 - Basic foundation of Python and Micro-bit
 
-### ✅How to get familiar with Python and Micro-bit?
+### ✅ How to get familiar with Python and Micro-bit?
 - For Micro-bit and python usage for it, go to [https://microbit.org/code/](https://microbit.org/code/)
 - More Python? [W3School](https://www.w3schools.com/python/default.asp) is your good friend.
 
 ---
 
-# 🛼 How to start?
+# How to start? 🛼 
 
 ### 🛹 Method 1
 1. Download the hex file in this repository
@@ -41,9 +41,9 @@ Think about what you can do to find the real message...
 - Space between each morse code means... ?
 - How to translate the morse code into English alphabets?
 
-### Have fun with Morse code
+### 🍧 Have fun with Morse code
 I prepare a sample for you to have a look at how Morse code wroks.
-##### Links
+#### 🔗 Links
 [Replit - Morse Code Converter](https://replit.com/@iceueb/morse-code?v=1).
 
 ![Morse Code Converter](./images/02-Morse-Code-Converter.png)
