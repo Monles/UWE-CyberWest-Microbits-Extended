@@ -9,6 +9,12 @@
 ---
 
 # How to start?
+
+### Method 1
+1. Download the hex file in this repository
+2. Drage the hex file to the folder micro-bits
+
+### Method 2
 1. Go to [https://microbit.org/code/](https://microbit.org/code/)
 2. Open Python Editor
 3. Copy and paste the code to the python editor
