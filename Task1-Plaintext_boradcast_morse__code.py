@@ -29,52 +29,120 @@ class PairingClass:
         return "%s%s" % (new_group, delimiter)
 
 def text_to_morse(text):
-    # Define a dictionary mapping characters to Morse code
-    morse_code_dict = {
-        'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 
-        'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 
-        'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 
-        'Y': '-.--', 'Z': '--..', 
-        '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', 
-        '7': '--...', '8': '---..', '9': '----.', 
-        ' ': ' ',  # Space
-        ',': '--..--',  # Mapping for comma
-        '.': '.-.-.-',  # Mapping for period
-        '?': '..--..',  # Mapping for question mark
-        '/': '-..-.',   # Mapping for slash
-        '-': '-....-',  # Mapping for hyphen
-        '(': '-.--.',   # Mapping for opening parenthesis
-        ')': '-.--.-'   # Mapping for closing parenthesis
-    }
+  # Define a dictionary mapping characters to Morse code
+  morse_code_dict = {
+      'A': '.-',
+      'B': '-...',
+      'C': '-.-.',
+      'D': '-..',
+      'E': '.',
+      'F': '..-.',
+      'G': '--.',
+      'H': '....',
+      'I': '..',
+      'J': '.---',
+      'K': '-.-',
+      'L': '.-..',
+      'M': '--',
+      'N': '-.',
+      'O': '---',
+      'P': '.--.',
+      'Q': '--.-',
+      'R': '.-.',
+      'S': '...',
+      'T': '-',
+      'U': '..-',
+      'V': '...-',
+      'W': '.--',
+      'X': '-..-',
+      'Y': '-.--',
+      'Z': '--..',
+      '0': '-----',
+      '1': '.----',
+      '2': '..---',
+      '3': '...--',
+      '4': '....-',
+      '5': '.....',
+      '6': '-....',
+      '7': '--...',
+      '8': '---..',
+      '9': '----.',
+      ' ': ' ',  # Space
+      ',': '--..--',  # Mapping for comma
+      '.': '.-.-.-',  # Mapping for period
+      '?': '..--..',  # Mapping for question mark
+      '/': '-..-.',  # Mapping for slash
+      '(': '-.--.',  # Mapping for opening parenthesis
+      ')': '-.--.-',  # Mapping for closing parenthesis
+      '!': '− · − · − −',
+  }
 
-    # Convert text to uppercase to ensure all characters are handled consistently
-    text = text.upper()
+  # Convert text to uppercase to ensure all characters are handled consistently
+  text = text.upper()
 
-    # Convert each character in the text to Morse code and join them together
-    morse_code = ' '.join([morse_code_dict.get(char, '') for char in text])
+  # Convert each character in the text to Morse code and join them together
+  morse_code = ' '.join([morse_code_dict.get(char, '') for char in text])
 
-    return morse_code
+  return morse_code
 
 
 def morse_to_text(morse_code):
-    # Define a dictionary mapping Morse code to characters
-    morse_code_dict = {
-        '.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F', '--.': 'G', '....': 'H', 
-        '..': 'I', '.---': 'J', '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O', '.--.': 'P', 
-        '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T', '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X', 
-        '-.--': 'Y', '--..': 'Z', 
-        '-----': '0', '.----': '1', '..---': '2', '...--': '3', '....-': '4', '.....': '5', '-....': '6', 
-        '--...': '7', '---..': '8', '----.': '9', 
-        '': ' ',  # Space (added to handle delimiter)
-    }
+  # Define a dictionary mapping Morse code to characters
+  morse_code_dict = {
+      '.-': 'A',
+      '-...': 'B',
+      '-.-.': 'C',
+      '-..': 'D',
+      '.': 'E',
+      '..-.': 'F',
+      '--.': 'G',
+      '....': 'H',
+      '..': 'I',
+      '.---': 'J',
+      '-.-': 'K',
+      '.-..': 'L',
+      '--': 'M',
+      '-.': 'N',
+      '---': 'O',
+      '.--.': 'P',
+      '--.-': 'Q',
+      '.-.': 'R',
+      '...': 'S',
+      '-': 'T',
+      '..-': 'U',
+      '...-': 'V',
+      '.--': 'W',
+      '-..-': 'X',
+      '-.--': 'Y',
+      '--..': 'Z',
+      '-----': '0',
+      '.----': '1',
+      '..---': '2',
+      '...--': '3',
+      '....-': '4',
+      '.....': '5',
+      '-....': '6',
+      '--...': '7',
+      '---..': '8',
+      '----.': '9',
+      '': ' ',  # Space (added to handle delimiter)
+      '--..--': ',',
+      '.-.-.-': '.',
+      '..--..': '?',
+      '-..-.': '/',
+      '-.--.': '(',
+      '-.--.-': ')',
+      '− · − · − −': '!',
+  }
 
-    # Split Morse code into individual characters (letters) based on spaces
-    morse_letters = morse_code.split(' ')
+  # Split Morse code into individual characters (letters) based on spaces
+  morse_letters = morse_code.split(' ')
 
-    # Convert each Morse code letter to its corresponding English character
-    english_text = ''.join([morse_code_dict.get(letter, '') for letter in morse_letters])
+  # Convert each Morse code letter to its corresponding English character
+  english_text = ''.join(
+      [morse_code_dict.get(letter, '') for letter in morse_letters])
 
-    return english_text
+  return english_text
 
 # Pairing instance
 pairing = PairingClass()
