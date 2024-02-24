@@ -26,3 +26,7 @@ Think about what you can do to find the real message...
 - What does each character represent in morse code? (Hint: They are all upper-case!)
 - Space between each morse code means... ?
 - How to translate the morse code into English alphabets?
+
+### Have fun with Morse code
+I prepare a sample for you to have a look at how Morse code wroks.
+[Replit - Morse Code Converter](https://replit.com/@iceueb/morse-code?v=1)
