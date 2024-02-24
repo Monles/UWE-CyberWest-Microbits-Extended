@@ -1,15 +1,23 @@
 # Aim 🏍️
-This repository is the extended version of [UWE - CyberWest Teacher Workshops](https://github.com/uwe-cyber/teachersworkshop2024).
+- This repository is the extended version of [UWE - CyberWest Teacher Workshops](https://github.com/uwe-cyber/teachersworkshop2024).
+- The overview of this [Activity: A (micro)Bit of Radio Security](https://github.com/uwe-cyber/teachersworkshop2024/blob/main/lesson-microbitradiosecurity.md) can be viewed via the link.
+
+### 🍵 Brief
+- Students will use the micro:bits to communicate with each other via radio. Initial communication will be done as a broadcast and in plaintext. 
+- Students will then work through the use of pairing and “encrypted” communication. 
+- The exercise has been designed to cover the importance of secure communication and use of coding within cyber security.
+
+---
 
 ### ❇️ Where to start?
 Please follow the instruction in the section "Start the Game! 🤖" below.
 
 ###  ✳️ Prerequisite
-- 2 x micro-bits
-- Basic foundation of Python and Micro-bit
+- 2 x BBC micro:bits(v2)
+- Basic foundation of Python and micro:bits
 
 ### ✅ How to get familiar with Python and Micro-bit?
-- For Micro-bit and python usage for it, go to [https://microbit.org/code/](https://microbit.org/code/)
+- For micro:bits and python usage for it, go to [https://microbit.org/code/](https://microbit.org/code/)
 - More Python? [W3School](https://www.w3schools.com/python/default.asp) is your good friend.
 
 ---
