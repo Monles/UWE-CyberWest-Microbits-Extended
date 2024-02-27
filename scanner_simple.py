@@ -1,3 +1,5 @@
+# Only receive group ID
+
 from microbit import *
 import radio
 
