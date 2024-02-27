@@ -296,14 +296,12 @@ def main():
                     display.scroll("A")
                     message.append(".")
                     print(message)
-                    display.show(message)
                     sleep(500)  # Adjust as needed
                 # Press button B to add '-'
                 if button_b.is_pressed():
                     display.scroll("B")
                     message.append("-")
                     print(message)
-                    display.show(message)
                     sleep(500)  # Adjust as needed
                 # Touch the logo to add the space
                 if pin_logo.is_touched():
@@ -312,14 +310,19 @@ def main():
                     print(message)
                     display.show(message)
                     sleep(500)  # Adjust as needed
-                # Press button A & B at the same time
-                # To show the message you type
-                if button_a.is_pressed() and button_b.is_pressed():
-                    display.scroll("A and B")
+                
+                # There are two ways to see the message students type
+                # 1. Press button A & B at the same time
+                # 2. Move the micro:bit towards the ground slowly
+                # Then the micro:bit will show the message
+                if (button_a.is_pressed() and button_b.is_pressed()) or ( accelerometer.was_gesture('face down')):
+                    display.scroll("ALL")
+                    display.show(Image.HEART)
                     print("Show the message")
                     display.show(message)
                     print(convertCharToString(message))
                     sleep(500)  # Adjust as needed
+                    
                 # Shake the micro:bit to send the messages
                 if accelerometer.was_gesture("shake"):
                     selected_message = convertCharToString(message)
