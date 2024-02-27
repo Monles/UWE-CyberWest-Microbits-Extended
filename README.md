@@ -1,6 +1,6 @@
 # Aim 🏍️
-- This repository is the extended version of [UWE - CyberWest Teacher Workshops](https://github.com/uwe-cyber/teachersworkshop2024).
-- The overview of this [Activity: A (micro)Bit of Radio Security](https://github.com/uwe-cyber/teachersworkshop2024/blob/main/lesson-microbitradiosecurity.md) can be viewed via the link.
+- This repository is the extended version of [Activity: A (micro)Bit of Radio Security](https://github.com/uwe-cyber/micro-bit_of_radio_security).
+- The overview of this [UWE - CyberWest Teacher Workshops](https://github.com/uwe-cyber/teachersworkshop2024/blob/main/lesson-microbitradiosecurity.md) can be viewed via the link.
 
 ### 🍵 Brief
 - Students will use the micro:bits to communicate with each other via radio. Initial communication will be done as a broadcast and in plaintext. 
