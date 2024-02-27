@@ -52,6 +52,9 @@ Think about what you can do to find the real message...
 ### 🍧 Have fun with Morse code
 I prepare a sample for you to have a look at how Morse code wroks.
 #### 🔗 Links
-[Replit - Morse Code Converter](https://replit.com/@iceueb/morse-code?v=1).
+1. &nbsp; [Replit - Morse Code Converter](https://replit.com/@iceueb/morse-code?v=1) <br>
 
 ![Morse Code Converter](./images/02-Morse-Code-Converter.png)
+
+2. &nbsp; [International Morse](https://morsecode.world/international/morse2.html) <br>
+This is the reference we used for morse code.
