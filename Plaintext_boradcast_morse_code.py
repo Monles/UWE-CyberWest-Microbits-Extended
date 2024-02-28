@@ -308,14 +308,13 @@ def main():
                     display.scroll("L")
                     message.append(" ")
                     print(message)
-                    display.show(message)
                     sleep(500)  # Adjust as needed
                 
                 # There are two ways to see the message students type
                 # 1. Press button A & B at the same time
-                # 2. Move the micro:bit towards the ground slowly
+                # 2. Touch pin 0
                 # Then the micro:bit will show the message
-                if (button_a.is_pressed() and button_b.is_pressed()) or ( accelerometer.was_gesture('face down')):
+                if (button_a.is_pressed() and button_b.is_pressed()) or accelerometer.was_gesture("shake"):
                     display.scroll("ALL")
                     display.show(Image.HEART)
                     print("Show the message")
@@ -323,16 +322,32 @@ def main():
                     print(convertCharToString(message))
                     sleep(500)  # Adjust as needed
                     
-                # Shake the micro:bit to send the messages
-                if accelerometer.was_gesture("shake"):
+                # Move the micro:bit towards the gound slowly send the English messages
+                if accelerometer.was_gesture('face down'):
                     selected_message = convertCharToString(message)
                     decrypted_message = morse_to_text(selected_message)
-                    display.show(Image.ARROW_N)
 
                     # Print the message
                     print("Morse Code: ", selected_message)
                     print("Decrypted Text: ", decrypted_message)
-                    print("Sending Message....")
+                    print("Sending English Message....")
+
+                    # Send the meesgae
+                    radio.send(decrypted_message)
+                    message_sent = True
+
+                    display.clear()
+                    sleep(500)  # Adjust as needed
+
+                # Move the micro:bit to the right slowly send the English messages
+                if accelerometer.was_gesture('right'):
+                    selected_message = convertCharToString(message)
+                    decrypted_message = morse_to_text(selected_message)
+
+                    # Print the message
+                    print("Morse Code: ", selected_message)
+                    print("Decrypted Text: ", decrypted_message)
+                    print("Sending Encrypted Message....")
 
                     # Send the meesgae
                     radio.send(selected_message)
@@ -340,6 +355,7 @@ def main():
 
                     display.clear()
                     sleep(500)  # Adjust as needed
+                    
                 sleep(100)
 
 
