@@ -11,7 +11,6 @@ PAIR_DELIMITER = ","
 
 # Gloobal variables
 new_group = 0
-sniffing = False
 
 # Function to handle receiving messages
 def receive_messages():
@@ -35,12 +34,6 @@ def main():
         # Start receiving messages
         receive_messages()
     
-    # Create an empty array for storing characters of the message
-    message = []
-
-    # Main loop
-    while True:
-        on_data_received()
 
 # Call the main function if the script is run directly
 if __name__ == "__main__":
