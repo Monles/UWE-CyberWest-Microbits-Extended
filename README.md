@@ -52,12 +52,13 @@ Think about what you can do to find the real message...
 ### How to play?
 1.  &nbsp;Press B to start "Pairing" process (micro:bit A)
 2.  &nbsp;Press A & B to complete the pairing (micro:bit B)
-3.  &nbsp;Press A to type Morse Code (micro:bit A)
+3.  &nbsp;Press A to type Morse Code (micro:bit A), then
     - Press A to type '.p (Dot)
     - Press B to type '-' (Dash)
     - Touch Logo to type ' ' (Space)
-    - 'Press A & B' OR 'Move micro:bit A towards the ground slowly', so you can see all the message you type manually. It's a good way to review the massage before sending it.
-    - Shake micro:bit A to send the message 🫨
+    - Shake micro:bit A 🫨 OR Press 'A & B' OR , so you can see all the message you type manually. It's a good way to review the massage before sending it.
+    - Move micro:bit A towards the ground slowly to send the decrypted message
+    - Move micro:bit A to the right to send the encrypted message
 
 ![Print the output](./images/04-print-output.png)
 
