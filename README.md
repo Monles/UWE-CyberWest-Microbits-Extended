@@ -64,7 +64,7 @@ Think about what you can do to find the real message...
 1.  &nbsp;Press B to start "Pairing" process (micro:bit A)
 2.  &nbsp;Press A & B to complete the pairing (micro:bit B)
 3.  &nbsp;Press A to type Morse Code (micro:bit A), then
-    - Press A to type '.p (Dot)
+    - Press A to type '.' (Dot)
     - Press B to type '-' (Dash)
     - Touch Logo to type ' ' (Space)
     - Shake micro:bit A 🫨 OR Press 'A & B', so you can see all the message you type manually. It's a good way to review the massage before sending it.
