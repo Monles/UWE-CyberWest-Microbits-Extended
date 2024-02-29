@@ -17,7 +17,7 @@ Please go to the section "Start the Game! 🤖" below. It's time for fun!
 
 ### ✳️ Prerequisite
 
-- 2 x BBC micro:bits(v2)
+- 3 x BBC micro:bits(v2) as a sender, a receiver and a scanner
 - Basic foundation of Python and micro:bits
 
 ### ✅ How to get familiar with Python and Micro-bit?
