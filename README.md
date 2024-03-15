@@ -33,6 +33,8 @@ Please go to the section "Start the Game! 🤖" below. It's time for fun!
 
 1. Download the hex file in this repository
 2. Drage the hex file to the folder of micro-bits
+    - "Plaintext_boradcast_morse_code.hex" is for both the receiver and the sender. More info is uner the section "Task 1".
+    - "Scanner.hex" is for the scanner (A.K.A. Man in the middle), which can receive all the message without noticing the sender and the receiver.
 
 ### 🛴Method 2
 
