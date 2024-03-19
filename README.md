@@ -98,7 +98,7 @@ ciphertext over radio. At this stage only the two parties know the key!
 1. Build "caesar_cipher.py" or drop the hex file on both micro:bits to start.
 2. Follow the first two steps in the previous exercise to pair the devices.
 3. Press A to cycle through messages on micro:bit #1. Decide which one you would like to send and press B while it is scrolling.
-4. The receiver will read the ciphertext on their device decrypt the message knowing the key. This can be done manually or using an online tool such as
+4. The receiver will read the ciphertext on their device and decrypt the message knowing the key. This can be done manually or using an online tool such as
    Cryptii or CyberChef:
     https://cryptii.com/pipes/caesar-cipher
     https://gchq.github.io/CyberChef/
