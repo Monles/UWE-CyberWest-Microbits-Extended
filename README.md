@@ -13,16 +13,16 @@
 
 ### ❇️ Already experienced with micro:bits?
 
-Please go to the section "Start the Game! 🤖" below. It's time for fun!
+Please go to the "Start the Game! 🤖" section below. It's time for fun!
 
-### ✳️ Prerequisite
+### ✳️ Prerequisites
 
-- 3 x BBC micro:bits(v2) as a sender, a receiver and a scanner
-- Basic foundation of Python and micro:bits
+- 3 x BBC micro:bits(v2) as a sender, a receiver and a scanner (virtual micro:bits are also available in the microbit.org Python editor!)
+- Basic knowledge of Python and the micro:bit
 
 ### ✅ How to get familiar with Python and Micro-bit?
 
-- For micro:bits and python usage for it, go to [https://microbit.org/code/](https://microbit.org/code/)
+- To find out more about Python for the micro:bit, visit: [https://microbit.org/code/](https://microbit.org/code/)
 - More Python? [W3School](https://www.w3schools.com/python/default.asp) is your good friend.
 
 ---
@@ -32,18 +32,18 @@ Please go to the section "Start the Game! 🤖" below. It's time for fun!
 ### 🛹 Method 1
 
 1. Download the hex file in this repository
-2. **Drage the hex** file to the folder of micro-bits
-    - "Plaintext_boradcast_morse_code.hex" is for both the receiver and the sender. More info is uner the section "Task 1".
-    - "Scanner.hex" is for the scanner (A.K.A. Man in the middle), which can receive all the message without noticing the sender and the receiver.
+2. **Drag and drop the hex** file into the micro:bit folder
+    - "Plaintext_boradcast_morse_code.hex" is for both the receiver and the sender. More info is under the section "Task 1".
+    - "Scanner.hex" is for the scanner (A.K.A. Man in the middle), which can intercept all communication without alerting the sender and the receiver.
 
 ### 🛴Method 2
 
 1. Go to [https://microbit.org/code/](https://microbit.org/code/)
 2. Open Python Editor
-3. Copy and paste the code to the python editor
-4. Press "Save" button on the right-bottom side (.hex), you can choose to download python file or hex file(this one is set by default)
-5. Drag the hex file to the folder of microbit
-6. Run it and have fun 🤞
+3. Copy and paste the code into the Python editor
+4. Press the "Save" button on the lower right-hand side (.hex). You can choose to download either the Python or hex file (the latter is set by default)
+5. Connect the micro:bit via USB and drag the hex file into its folder
+6. Wait for the micro:bit LED to stop flashing and have fun 🤞
 
 ![python editor](./images/01-python-editor.png)
 
@@ -53,19 +53,19 @@ Please go to the section "Start the Game! 🤖" below. It's time for fun!
 
 # Start the Game! 🤖
 
-## 🏀 Task 1 - Morse code in plaintext broadcast
+## 🏀 Task 1 - Morse code in paired communication
 
 Think about what you can do to find the real message...
 
-- What does each character represent in morse code? (Hint: They are all upper-case!)
-- Space between each morse code means... ?
-- How to translate the morse code into English alphabets?
+- What does each character represent in Morse code? (Hint: They are all upper-case!)
+- Space between each Morse code means... ?
+- How to translate Morse code into the English alphabet?
 
 ### How to play?
 
-1.  &nbsp;Press B to start "Pairing" process (micro:bit A)
-2.  &nbsp;Press A & B to complete the pairing (micro:bit B)
-3.  &nbsp;Press A to type Morse Code (micro:bit A), then
+1.  &nbsp;Press B to start the "Pairing" process on micro:bit #1
+3.  &nbsp;Press A & B to complete pairing once the "+" symbol is displayed on micro:bit #2
+4.  &nbsp;Press A to type Morse Code (micro:bit A), then
     - Press A to type '.' (Dot)
     - Press B to type '-' (Dash)
     - Touch Logo to type ' ' (Space)
@@ -77,7 +77,7 @@ Think about what you can do to find the real message...
 
 ### 🍧 Have fun with Morse code
 
-I prepare a sample for you to have a look at how Morse code wroks.
+I prepared a sample to illustrate how Morse code works.
 
 #### 🔗 Links
 
@@ -87,3 +87,26 @@ I prepare a sample for you to have a look at how Morse code wroks.
 
 2. &nbsp; [International Morse](https://morsecode.world/international/morse2.html) <br>
    This is the reference we used for morse code.
+
+## 🏀 Task 2 - Cracking Caesar Ciphers
+
+In this task, the sender micro:bit will pair with a receiver and choose a message to encrypt with a Caesar cipher. The other device will receive the 
+ciphertext over radio. At this stage only the two parties know the key! 
+
+### How to play?
+
+1. Build "caesar_cipher.py" or drop the hex file on both micro:bits to start.
+2. Follow the first two steps in the previous exercise to pair the devices.
+3. Press A to cycle through messages on micro:bit #1. Decide which one you would like to send and press B while it is scrolling.
+4. The receiver will decrypt the message knowing the key. This can be done manually or using an online tool such as Cryptii or CyberChef:
+    https://cryptii.com/pipes/caesar-cipher
+    https://gchq.github.io/CyberChef/
+  
+Did it take long?
+
+5. Next, a third micro:bit equipped with scanner code will attempt to intercept the sender and receiver's radio group, as well as the messages
+   they are exchanging. The third participant does not know the key and will have to look into ways of finding this out!
+
+6. Once the task is finished, examine the code for a closer look into the way this is implemented. We are currently working on more code
+   that will automate the Caesar cipher guessing process...
+
