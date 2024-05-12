@@ -21,13 +21,13 @@ class PairingClass:
     def __init__(self): 
         pass  
     
-# Random number generator for the radio group number
-def random_int(self, _min, _max, sys_time): 
-    random.seed(sys_time) 
-    return random.randint(_min, _max) 
+    # Random number generator for the radio group number
+    def random_int(self, _min, _max, sys_time): 
+        random.seed(sys_time) 
+        return random.randint(_min, _max) 
 
-def data_string(self, new_group, delimiter): 
-    return "%s%s" % (new_group, delimiter) 
+    def data_string(self, new_group, delimiter): 
+        return "%s%s" % (new_group, delimiter) 
 
   
 
@@ -58,7 +58,7 @@ def encrypt(message):
     return encrypted_message  
 
 
-# Function to decrypt a message (not called, adjust the code to do so if needed according to the aim of your lesson) 
+# Function to decrypt a message (not called, uncomment the code on lines 94-96 to do so if needed according to the aim of your lesson) 
 def decrypt(encrypted_message): 
 
     decrypted_message = "" 
@@ -82,26 +82,27 @@ def decrypt(encrypted_message):
   
 
 # Handle all potential data incoming from the radio 
-
 def on_data_received(): 
-
     global pairing_started, paired, confirm_wait, confirmed, new_group 
-
     received_data = radio.receive() 
 
     if received_data is not None: 
         if paired: 
             display.scroll(received_data)  
+            """ Uncomment and create a new hex file to also display the decrypted text on receipt, 
+            remember to make sure the cipher shift values match in both functions: 
+            received_decrypted = decrypt(received_data)
+            sleep(2000)
+            display.scroll(received_decrypted)
+            """
 
     
         # HANDLE EMPTY DATA 
-
         if received_data == "": 
             pass  # Do nothing 
 
   
         # HANDLE CONFIRMATION MESSAGE 
-
         elif confirm_wait and not paired: 
             if received_data == CONFIRM_MESSAGE: 
                 paired = True 
@@ -109,7 +110,6 @@ def on_data_received():
 
   
         # HANDLE POTENTIAL PAIRING DATA 
-
         elif not confirm_wait and not paired: 
 
             started_waiting = running_time() 
@@ -212,7 +212,7 @@ def main():
     # Here is a Python list containing a choice of messages in plaintext. You may change these as you wish.
     # The microbit will scroll these on its display. 
     # Press button A to scroll to the next message and B to choose one to be encrypted and sent.
-    messages = ["This is a Caesar cipher", "It is easy to break", "Try frequency analysis", "Are Caesar ciphers really secure?"] 
+    messages = ["Hello", "Goodbye", "How are you?", "Shhh! it's secret"] 
     current_message_index = 0 
 
 
