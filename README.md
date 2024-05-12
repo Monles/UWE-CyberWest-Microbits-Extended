@@ -91,19 +91,19 @@ I prepared a sample to illustrate how Morse code works.
 ## 🏀 Task 2 - Cracking Caesar Ciphers
 
 In this task, the sender micro:bit will pair with a receiver and choose a message to encrypt with a Caesar cipher. The other device will receive the 
-ciphertext over radio. At this stage only the two parties know the key! 
+ciphertext over radio.
 
 ### How to play?
 
-1. Build "caesar_cipher.py" or drop the hex file on both micro:bits to start.
-2. Follow the first two steps in ** Task 1 - How to Play ** to pair the devices.
+1. Build **caesar_cipher.py** or drop the pre-built **caesar_cipher.hex** file onto both micro:bits to start.
+2. Follow the first two steps in **Task 1 - How to Play** to pair the devices.
 3. Press A to cycle through messages on micro:bit #1. Decide which one you would like to send and press B while it is scrolling.
-4. The receiver will read the ciphertext on their device and try to find the key, or the sender can share the key only with the receiver in advance.
+4. The receiver will read the ciphertext on their device and try to find the key. Alternatively, the sender can share the key only with the receiver in advance.
    Cracking the cipher can be done manually or by using an online tool such as Cryptii or CyberChef:
     https://cryptii.com/pipes/caesar-cipher
     https://gchq.github.io/CyberChef/
   
-A decryption function is included in the code, but its result is not displayed by the micro:bit. You may uncomment lines 97-99 in ** caesar_cipher.py ** to also 
+A decryption function is included in the code, but its result is not displayed by the micro:bit. You may uncomment lines 97-99 in **caesar_cipher.py** to also 
 scroll the decrypted text depending on the aims and objectives of your lesson. You may also change the Caesar cipher shift value in these functions. You will need 
 to generate a new hex file in either case.
 
