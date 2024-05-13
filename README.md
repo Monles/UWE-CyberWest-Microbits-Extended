@@ -34,8 +34,8 @@ Please go to the "Start the Game! 🤖" section below. It's time for fun!
 
 1. Download the hex file in this repository
 2. **Drag and drop the hex** file into the micro:bit folder
-    - "Plaintext_boradcast_morse_code.hex" is for both the receiver and the sender. More info is under the section "Task 1".
-    - "Scanner.hex" is for the scanner (A.K.A. Man in the middle), which can intercept all communication without alerting the sender and the receiver.
+    - "Plaintext_broadcast_morse_code.hex" is for both the receiver and the sender. More info is under the section "Task 1".
+    - "Scanner.hex" is for the scanner (A.K.A. Man-in-the-middle), which can intercept all communication without alerting the sender and the receiver.
 
 ### 🛴Method 2
 
@@ -78,7 +78,7 @@ Think about what you can do to find the real message...
 
 ### 🍧 Have fun with Morse code
 
-I prepared a sample to illustrate how Morse code works.
+The following sample illustrates how Morse code works.
 
 #### 🔗 Links
 
@@ -104,7 +104,7 @@ ciphertext over radio.
     https://cryptii.com/pipes/caesar-cipher
     https://gchq.github.io/CyberChef/
   
-A decryption function is included in the code, but its result is not displayed by the micro:bit. You may uncomment lines 97-99 in **caesar_cipher.py** to also 
+A decryption function is included in the code, but its result is not displayed by the micro:bit. You may uncomment lines 94-96 in **caesar_cipher.py** to also 
 scroll the decrypted text depending on the aims and objectives of your lesson. You may also change the Caesar cipher shift value in these functions. You will need 
 to generate a new hex file in either case.
 
