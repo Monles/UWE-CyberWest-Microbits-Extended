@@ -7,7 +7,8 @@
 
 - Students will use the micro:bits to communicate with each other via radio. Initial communication will be done as a broadcast and in plaintext.
 - Students will then work through the use of pairing and “encrypted” communication.
-- The exercise has been designed to cover the importance of secure communication and use of coding within cyber security.
+- The second exercise will then illustrate the use of Caesar ciphers.
+- These exercises have been designed to cover the importance of secure communication and use of coding within cyber security.
 
 ---
 
