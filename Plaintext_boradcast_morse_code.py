@@ -358,6 +358,6 @@ def main():
                 sleep(100)
 
 
-# Call the main function if the script is run directly
+# Call the main function if the script is running directly
 if __name__ == "__main__":
     main()
