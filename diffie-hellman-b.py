@@ -1,3 +1,5 @@
+# Code for microbit B 
+
 from microbit import *
 import radio
 import random
@@ -5,6 +7,11 @@ import random
 # Constants
 CONFIRM_MESSAGE = "confirm"
 PAIR_DELIMITER = ","
+p = 23 # 'large' prime number
+g = 5 # integer coprime to p, ie GCD(g,p)={1}
+radio_group = 10 # Change number for each pair of participants. Must be integer between 0 and 83 inclusive
+
+
 
 # Global variables
 pairing_started = False
@@ -16,6 +23,10 @@ encryption_key = 0b10101010
 
 # Radio configuration
 radio.on()
+radio.config(group=radio_group) 
+
+### Diffie-Hellman Variables ###
+received_key_a_flag = False
 
 # Pairing class
 class PairingClass:
@@ -31,6 +42,19 @@ class PairingClass:
 
 # Pairing instance
 pairing = PairingClass()
+
+### Diffie-Hellman Functions ###
+# Function to calculate (g^b) % p 
+
+def mod_exp(base, exponent, modulus): 
+    result = 1 
+    while exponent > 0: 
+        if exponent % 2 == 1: 
+            result = (result * base) % modulus 
+        exponent = exponent // 2 
+        base = (base * base) % modulus 
+    return result 
+
 
 # Function to encrypt a message
 def encrypt(message):
@@ -157,27 +181,36 @@ def main():
    
 
     # Main loop
+     # Main loop
     while True:
         on_data_received()
 
-        message_sent = False
 
-        if button_a.is_pressed() and paired:
-            display.scroll(messages[current_message_index], wait=False)
-            sleep(500)  # Adjust as needed
+        # Wait for public key A from microbit A 
+        while not received_key_a_flag: 
+            received_data = radio.receive() 
+            if received_data is not None: 
+                received_key_a = int(received_data) # Potential for MitM here?
+                display.scroll("R") 
+                display.scroll(received_key_a) 
+                received_key_a_flag = True 
+        # Generate private key b 
+        private_key_b = random.randint(1, p - 1) 
 
-            while not message_sent:
-                if button_a.is_pressed():
-                    current_message_index = (current_message_index + 1) % len(messages)
-                    display.scroll(messages[current_message_index], wait=False)
-                    sleep(500)  # Adjust as needed
-    
-                if button_b.is_pressed():
-                    display.clear()
-                    selected_message = messages[current_message_index]
-                    encrypted_message = encrypt(selected_message)
-                    radio.send(encrypted_message)
-                    message_sent = True
+        # Calculate public key b
+        public_key_b = mod_exp(g, private_key_b, p) 
+        radio.send(str(public_key_b)) 
+        display.scroll("PKB sent") 
+
+        # Calculate shared secret 
+        shared_secret = mod_exp(received_key_a, private_key_b, p) 
+
+        # Display shared secret 
+        display.scroll(str(shared_secret), wait=False, loop=True) 
+
+        sleep(5000) 
+
+        # Derive encryption key from shared secret to encrypt messages
                 
 # Call the main function if the script is run directly
 if __name__ == "__main__":
