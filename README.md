@@ -113,3 +113,8 @@ to generate a new hex file in either case.
 
 6. Once the task is finished, examine the code for a closer look into the way the cipher is implemented. 
 
+## 🚨 Troubleshooting
+### Q1. The hex file doesn't work. / The microbit shows random characters or memory error
+### Ans: 
+1. Press the button on the back of the microbit to reset it. 
+2. Go to [Micro:bits Python Editor Online](https://python.microbit.org/v/3), and paste any python file in the editor, then save the hex file to the microbit you use. 
